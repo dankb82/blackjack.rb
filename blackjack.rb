@@ -1,55 +1,32 @@
 
-hard = {8 => {5 => "Double if possible, otherwise hit.",
-6 => "Double if possible, otherwise hit."},
-
-9 => {2 => "Double if possible, otherwise hit.",
-        3 => "Double if possible, otherwise hit.",
-        4 => "Double if possible, otherwise hit.",
-        5 => "Double if possible, otherwise hit.",
-        6 => "Double if possible, otherwise hit."},
-
- 10 => {2 => "Double if possible, otherwise hit.",
-        3 => "Double if possible, otherwise hit.",
-        4 => "Double if possible, otherwise hit.",
-        5 => "Double if possible, otherwise hit.",
-        6 => "Double if possible, otherwise hit.",
-        7 => "Double if possible, otherwise hit.",
-        8 => "Double if possible, otherwise hit.",
-        9 => "Double if possible, otherwise hit."},
-  11 => {2 => "Double if possible, otherwise hit.",
-         3 => "Double if possible, otherwise hit.",
-         4 => "Double if possible, otherwise hit.",
-         5 => "Double if possible, otherwise hit.",
-         6 => "Double if possible, otherwise hit.",
-         7 => "Double if possible, otherwise hit.",
-         8 => "Double if possible, otherwise hit.",
-         9 => "Double if possible, otherwise hit.",
-         10 => "Double if possible, otherwise hit.",
-         11 => "Double if possible, otherwise hit."},
-  12 => {4 => "Split!", 5 => "Split!", 6 => "Split!"},
-  13 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-         5 => "Split!", 6 => "Split!"},
-  14 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-         5 => "Split!", 6 => "Split!"},
-  15 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-         5 => "Split!", 6 => "Split!"},
-  16 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-         5 => "Split!", 6 => "Split!"},
-  17 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-    5 => "Split!", 6 => "Split!", 7 => "Split!", 8 => "Split!",
-    9 => "Split!", 10 => "Split!", 11 => "Split!"},
-  18 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-    5 => "Split!", 6 => "Split!", 7 => "Split!", 8 => "Split!",
-    9 => "Split!", 10 => "Split!", 11 => "Split!"},
-  19 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-    5 => "Split!", 6 => "Split!", 7 => "Split!", 8 => "Split!",
-    9 => "Split!", 10 => "Split!", 11 => "Split!"},
-  20 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-    5 => "Split!", 6 => "Split!", 7 => "Split!", 8 => "Split!",
-    9 => "Split!", 10 => "Split!", 11 => "Split!"},
-  21 => {2 => "Split!", 3 => "Split!", 4 => "Split!",
-    5 => "Split!", 6 => "Split!", 7 => "Split!", 8 => "Split!",
-    9 => "Split!", 10 => "Split!", 11 => "Split!"}}
+dh = "Double if possible, otherwise Hit."
+ds = "Double if possilbe, otherwise Stand."
+s = "Split!"
+hard = {8 => {5 => "#{dh}", 6 => "#{dh}"}, 9 => {2 => "#{dh}",
+3 => "#{dh}", 4 => "#{dh}", 5 => "#{dh}", 6 => "#{dh}"},
+10 => {2 => "#{dh}", 3 => "#{dh}", 4 => "#{dh}", 5 => "#{dh}",
+6 => "#{dh}", 7 => "#{dh}", 8 => "#{dh}", 9 => "#{dh}"},
+11 => {2 => "#{dh}", 3 => "#{dh}", 4 => "#{dh}", 5 => "#{dh}",
+6 => "#{dh}", 7 => "#{dh}", 8 => "#{dh}", 9 => "#{dh}",
+10 => "#{dh}", 11 => "#{dh}"}, 12 => {4 => "#{s}", 5 => "#{s}",
+6 => "#{s}"}, 13 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}",
+5 => "#{s}", 6 => "#{s}"}, 14 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}",
+5 => "#{s}", 6 => "#{s}"}, 15 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}",
+5 => "#{s}", 6 => "#{s}"}, 16 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}",
+5 => "#{s}", 6 => "#{s}"}, 17 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}",
+5 => "#{s}", 6 => "#{s}", 7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}",
+11 => "#{s}"}, 18 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}",5 => "#{s}",
+6 => "#{s}", 7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"},
+19 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}", 5 => "#{s}", 6 => "#{s}",
+7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"},
+20 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}", 5 => "#{s}", 6 => "#{s}",
+7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"},
+21 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}", 5 => "#{s}", 6 => "#{s}",
+7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"}}
+# soft = {13 => {}
+# 14
+# 15
+# 16
 puts "What is your first card?"
 first_card = gets.chomp.to_i
 puts "What is your second card?"
