@@ -1,13 +1,26 @@
-# def hard_hand
-#   puts hard[my_hand][dealer_card]
+def convert_aces(first_card, second_card)
+  if card.downcase == "a"
+    value = 11
+  else
+    value = card
+  end
+  return value
+end
+# def check_card(card)
+#   if card[0].downcase == "a"
+#     card = 11
+#   elsif card[0].downcase == "k" || card[0].downcase == "q" || card[0].downcase == "j"
+#     card = 10
+#   end
 # end
-#
-#
-#
  dh = "Double if possible, otherwise Hit."
  ds = "Double if possilbe, otherwise Stand."
  s = "Stand!"
  h = "Hit"
+ # a = {"a" => 11}
+ # face_cards = {"j" => 10, "q" => 10, "k" => 10}
+
+
 
 #Make hash default = "Hit!"
 
@@ -64,15 +77,20 @@ pairs = {4 => {8 => "#{h}", 9 => "#{h}", 10 => "#{h}", 11 => "#{h}"},
 7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"}}
 
 puts "What is your first card?"
-first_card = gets.chomp.to_i
+first_card = gets.chomp
 puts "What is your second card?"
-second_card = gets.chomp.to_i
+second_card = gets.chomp
 puts "What card is the dealer showing?"
-dealer_card = gets.chomp.to_i
+dealer_card = gets.chomp
   if first_card == second_card
     my_hand = first_card + second_card
     puts pairs[my_hand][dealer_card]
-  else
-    my_hand = first_card + second_card
-    puts hard[my_hand][dealer_card]
+  elsif
+    first_card.downcase == "a"
+    convert_aces
+    puts soft[my_hand][dealer_card]
+  elsif
+    second_card == "a"
+    convert_aces
+    puts soft[my_hand][dealer_card]
   end
