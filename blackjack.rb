@@ -1,8 +1,13 @@
-
-dh = "Double if possible, otherwise Hit."
-ds = "Double if possilbe, otherwise Stand."
-s = "Stand!"
-h = "Hit"
+# def hard_hand
+#   puts hard[my_hand][dealer_card]
+# end
+#
+#
+#
+ dh = "Double if possible, otherwise Hit."
+ ds = "Double if possilbe, otherwise Stand."
+ s = "Stand!"
+ h = "Hit"
 
 #Make hash default = "Hit!"
 
@@ -26,7 +31,7 @@ hard = {8 => {5 => "#{dh}", 6 => "#{dh}"}, 9 => {2 => "#{dh}",
 20 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}", 5 => "#{s}", 6 => "#{s}",
 7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"},
 21 => {2 => "#{s}", 3 => "#{s}", 4 => "#{s}", 5 => "#{s}", 6 => "#{s}",
-# 7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"}}
+7 => "#{s}", 8 => "#{s}", 9 => "#{s}", 10 => "#{s}", 11 => "#{s}"}}
 
 #Make hash default = "Hit!"
 
@@ -64,5 +69,10 @@ puts "What is your second card?"
 second_card = gets.chomp.to_i
 puts "What card is the dealer showing?"
 dealer_card = gets.chomp.to_i
-my_hand = first_card + second_card
-puts pairs[my_hand][dealer_card]
+  if first_card == second_card
+    my_hand = first_card + second_card
+    puts pairs[my_hand][dealer_card]
+  else
+    my_hand = first_card + second_card
+    puts hard[my_hand][dealer_card]
+  end
